@@ -3,11 +3,11 @@ const app = express();
 const mongoos =require('mongoose');
 const router = require('./routes/userRoutes')
 
-const bodyparser=require('body-parser')
-app.use(bodyparser.json());
-app.use(bodyparser.urlencoded({
-    extended: true
-}));
+// const bodyparser=require('body-parser')
+// app.use(bodyparser.json());
+// app.use(bodyparser.urlencoded({
+//     extended: true
+// }));
 
 app.use(express.json());
 const cors =require('cors');
@@ -17,8 +17,8 @@ app.use(cors({origin:'http://localhost:4200/'}))
 const URL='mongodb://localhost:27017/CrudOPerations'
 async function connect(){
     try{
-        await mongoos.connect(URL)
-        console.log("connect with mongoDB")
+        await mongoos.connect(URL ,{useNewUrlParser:true})
+        console.log("connect with mongoDB Succesfullyyyyyyyy")
     }catch (error){
      console.log(`Error -> ${error}`)
     }
