@@ -11,6 +11,13 @@ router.get('/test',auth, function(req,res){
 })
 
 ////////updated password routeee
-
 router.post('/updated-password', User.updated_password)
 module.exports = router;
+
+
+
+/////////////////////Forget Password
+router.post('/Forget-password',User.Forget_password)
+
+///////////////////
+router.get('/reset-password',User.reset_password)

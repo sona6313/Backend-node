@@ -23,7 +23,12 @@ const registerSchema = new mongoose.Schema({
     num : {
         type:String,
         required:true
+    },
+    token: {
+        type:String,
+        default:''
     }
+
 })
 
 
