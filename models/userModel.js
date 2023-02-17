@@ -27,6 +27,10 @@ const registerSchema = new mongoose.Schema({
     token: {
         type:String,
         default:''
+    },
+    varified:{
+        type:Boolean,
+        default:'false'
     }
 
 })

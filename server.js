@@ -11,7 +11,7 @@ const router = require('./routes/userRoutes')
 
 app.use(express.json());
 const cors =require('cors');
-app.use(cors({origin:'http://localhost:4200/'}))
+app.use(cors({origin:'http://localhost:4200'}))
 
 
 const URL='mongodb://localhost:27017/CrudOPerations'
@@ -29,6 +29,6 @@ app.use('/', router)
 
 
 
- app.listen(6000, (req,res)=>{
-    console.log("server is connected in the port 6000")
+ app.listen(3000, (req,res)=>{
+    console.log("server is connected in the port 3000")
  })
